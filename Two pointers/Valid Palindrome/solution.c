@@ -13,11 +13,11 @@ void MoveNextLetter(int s, int *pointer, int limit, bool left) {
   }
 }
 
-bool ValidPalindrime(char *s) {
+bool ValidPalindrime(char *s,int sizeS) {
   bool isPalindrome = true;
 
   int pointerLeft = 0;
-  int pointerRight = 0;
+  int pointerRight = sizeS-1;
 
   while (pointerLeft < pointerRight) {
     const char caracterLeft = s[pointerLeft];
