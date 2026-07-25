@@ -6,10 +6,6 @@ Given the head of a singly linked list, return the middle node of the linked lis
 
 If there are two middle nodes (i.e., the list has an even number of nodes), return the **second** middle node.
 
-Use the **two pointers (slow/fast)** technique: move a slow pointer one step at a time and a fast pointer two steps at a time, both starting at the head. When the fast pointer reaches the end of the list (or has no next node), the slow pointer will be at the middle.
-
-This solves the problem in a single pass, O(n) time and O(1) extra space, without needing to first count the length of the list.
-
 ## Input
 
 - The head of a singly linked list.

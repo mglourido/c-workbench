@@ -8,8 +8,6 @@ You are given two integer arrays `nums1` and `nums2`, sorted in non-decreasing o
 
 Merge `nums2` into `nums1` **in-place** so that `nums1` becomes a single sorted array of length `m + n`.
 
-Use the **two pointers** technique, but working **from the end** of both arrays: one pointer at the last valid element of `nums1` (index `m - 1`), one at the last element of `nums2` (index `n - 1`), and one at the last position of the combined array (index `m + n - 1`). Compare the two pointed-to values, place the larger one at the end position, and move the corresponding pointer backward. This avoids overwriting values in `nums1` that haven't been read yet.
-
 ## Input
 
 - Array `nums1` of length `m + n` (first `m` values valid, rest are placeholders).

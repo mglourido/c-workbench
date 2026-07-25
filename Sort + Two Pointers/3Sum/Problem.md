@@ -6,14 +6,6 @@ Given an integer array `nums`, return all the unique triplets `[nums[i], nums[j]
 
 The solution set must not contain duplicate triplets.
 
-This problem combines **sorting** with **two pointers**:
-
-1. Sort the array first (O(n log n)).
-2. Fix one element `nums[i]` and use two pointers (`left` starting right after `i`, `right` at the end of the array) to find pairs that sum with `nums[i]` to zero, moving the pointers inward based on the sum comparison.
-3. Skip duplicate values for `i`, `left`, and `right` to avoid repeated triplets.
-
-This reduces the brute-force O(n^3) approach to O(n^2).
-
 ## Input
 
 - An array of integers `nums`.

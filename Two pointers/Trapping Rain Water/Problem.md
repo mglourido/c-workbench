@@ -4,12 +4,6 @@
 
 Given `n` non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
 
-Use the **two pointers** technique: a `left` pointer starting at the beginning and a `right` pointer starting at the end. Keep track of `left_max` and `right_max`, the highest bar seen so far from each side.
-
-At each step, move the pointer on the side with the smaller max height inward: the water trapped above that bar is `side_max - height[pointer]` (which is never negative, because the other side is guaranteed to be at least as tall). Add this to the total and advance the pointer.
-
-This solves the problem in O(n) time and O(1) extra space.
-
 ## Input
 
 - An array of non-negative integers `height`.

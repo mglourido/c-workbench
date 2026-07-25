@@ -6,10 +6,6 @@ Given the head of a singly linked list, determine if the linked list has a cycle
 
 There is a cycle in a linked list if some node in the list can be reached again by continuously following the `next` pointer.
 
-Use the **two pointers (slow/fast)** technique, also known as **Floyd's Cycle Detection Algorithm**: move a slow pointer one step at a time and a fast pointer two steps at a time. If there is a cycle, the fast pointer will eventually meet the slow pointer. If the fast pointer reaches the end of the list (`NULL`), there is no cycle.
-
-This solves the problem in O(n) time and O(1) extra space, without needing a hash set to track visited nodes.
-
 ## Input
 
 - The head of a singly linked list. Nodes have an integer `val` and a `next` pointer.

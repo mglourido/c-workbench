@@ -4,8 +4,6 @@
 
 Given a string `s`, determine if it is a palindrome, considering only alphanumeric characters and ignoring case.
 
-Use the **two pointers** technique: one pointer starting at the beginning of the string and one at the end, moving them toward the center while skipping non-alphanumeric characters and comparing characters (case-insensitively).
-
 ## Input
 
 - A string `s`, which may contain letters, digits, spaces, and punctuation.

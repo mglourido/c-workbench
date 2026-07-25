@@ -8,8 +8,6 @@ Find two lines that, together with the x-axis, form a container that holds the m
 
 Return the maximum amount of water the container can store.
 
-Use the **two pointers** technique: start with one pointer at the beginning and one at the end of the array. At each step, compute the area formed by the two pointers, keep track of the maximum, and move the pointer pointing to the shorter line inward (since moving the taller one can never increase the area).
-
 ## Input
 
 - An array of non-negative integers `height`.

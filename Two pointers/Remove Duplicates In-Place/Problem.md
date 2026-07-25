@@ -6,8 +6,6 @@ Given a sorted array of integers `nums`, remove the duplicates **in-place** such
 
 Since you cannot change the length of the array in some languages, instead modify the array so that the first `k` elements contain the unique elements (in order), and return `k`, the number of unique elements. It does not matter what values are left beyond the first `k` elements.
 
-Use the **two pointers** technique: a slow pointer marking the position of the last unique element found, and a fast pointer scanning ahead through the array.
-
 ## Input
 
 - An array of integers `nums`, sorted in non-decreasing order.

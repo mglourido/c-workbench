@@ -15,6 +15,7 @@ El repositorio se organiza por **técnica/categoría** en la raíz, y cada técn
 <Technique>/
   <Problem Name>/
     Problem.md
+    Approach.md
     solution.c   (lo agrega el usuario, no Claude)
 ```
 
@@ -47,9 +48,9 @@ Cada `Problem.md` sigue esta estructura fija:
 
 ## Description
 
-Explicación del problema, incluyendo qué técnica conviene usar y por qué
-(ej. mencionar explícitamente "two pointers", "slow/fast", "sliding window", etc.,
-y la complejidad esperada).
+Explicación neutral del problema: qué se pide, sin mencionar ni insinuar
+la técnica a usar (nada de "two pointers", "slow/fast", "sliding window",
+complejidad esperada, etc.). El usuario debe pensar solo la estrategia.
 
 ## Input
 
@@ -72,12 +73,28 @@ Rango de tamaños y valores esperados (estilo LeetCode).
 Reglas para el contenido:
 
 - Siempre incluir al menos un ejemplo simple y uno con un caso borde (arreglo vacío, un solo elemento, todos iguales, etc.) cuando aplique.
-- La sección `Description` debe insinuar la técnica a usar (two/three pointers, slow/fast, sliding window) sin dar el código de la solución.
+- `Problem.md` **nunca** debe insinuar la técnica ni la complejidad esperada — eso es justo lo que el usuario tiene que descubrir.
 - No incluir código de solución en `Problem.md` — es solo el enunciado.
+
+## Formato de `Approach.md`
+
+Junto a cada `Problem.md` se crea un `Approach.md`, con la explicación de cómo resolver el problema (sin código), para que el usuario la use como referencia **después** de haber pensado su propia estrategia:
+
+```markdown
+# <Problem Name> — Approach
+
+Explicación de la técnica a usar (two pointers, slow/fast, sliding window,
+sort + two pointers, etc.), por qué aplica a este problema, cómo se mueven
+los punteros paso a paso, y la complejidad esperada (tiempo/espacio).
+Sin código, solo la idea/algoritmo en prosa o pseudocódigo de alto nivel.
+```
+
+Este archivo sí puede (y debe) nombrar la técnica explícitamente y explicar el razonamiento — es el archivo de "spoiler" que el usuario consulta cuando quiere revisar o está trabado.
 
 ## Añadir un problema nuevo
 
 1. Determinar la técnica/carpeta raíz correspondiente (crear una nueva si no encaja en las existentes).
-2. Crear `"<Technique>/<Problem Name>/Problem.md"` siguiendo el formato de arriba.
-3. Confirmar con el usuario en el chat, en español, en qué carpeta quedó y por qué (especialmente si la clasificación two/three pointers no es obvia).
-4. No crear el archivo de solución en C — eso lo escribe el usuario.
+2. Crear `"<Technique>/<Problem Name>/Problem.md"` siguiendo el formato de arriba (sin insinuar la técnica).
+3. Crear `"<Technique>/<Problem Name>/Approach.md"` con la explicación de la técnica y el razonamiento.
+4. Confirmar con el usuario en el chat, en español, en qué carpeta quedó y por qué (especialmente si la clasificación two/three pointers no es obvia).
+5. No crear el archivo de solución en C — eso lo escribe el usuario.

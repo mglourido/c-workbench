@@ -6,8 +6,6 @@ Given a sorted array of integers `nums` (ascending order) and an integer `target
 
 You may assume that each input has **exactly one solution**, and you may not use the same element twice.
 
-Use the **two pointers** technique: one pointer starting at the beginning of the array and one at the end, moving them toward each other based on the sum comparison with `target`. This solves the problem in O(n) time and O(1) extra space, instead of the O(n^2) brute force.
-
 ## Input
 
 - An array of integers `nums`, sorted in non-decreasing order.

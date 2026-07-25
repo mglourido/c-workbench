@@ -6,8 +6,6 @@ Given an integer array `nums`, move all `0`s to the end of it while maintaining 
 
 This must be done **in-place** without making a copy of the array.
 
-Use the **two pointers** technique: a slow pointer (`insertPos`) marking where the next non-zero element should go, and a fast pointer scanning through the array. Whenever the fast pointer finds a non-zero value, place it at `insertPos` and advance `insertPos`. After the scan, fill the remaining positions (from `insertPos` to the end) with zeroes.
-
 ## Input
 
 - An array of integers `nums`.
