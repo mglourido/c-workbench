@@ -1,12 +1,12 @@
 int removeDuplicates(int *nums, int sizeNums) {
-  int k = sizeNums;
+  int k = sizeNums-1;
 
   int pointerSet = 0; // pointer that sets the number being checked
   int pointerSearch = 0;
 
   while (pointerSet < k) {
     const int numRevise = nums[pointerSet];
-    pointerSearch = pointerSet;
+    pointerSearch = pointerSet+1;
 
     while (nums[pointerSearch] == numRevise)
       pointerSearch++;
