@@ -11,10 +11,9 @@ int *TwoSum(int *nums, int numsSize, int target) {
   while (sum != target) {
     if (sum > target) {
       pointerRight -= 1;
-    } else if (sum < target) {
+    } else {
       pointerLeft += 1;
-    } else
-      break;
+    }
 
     sum = nums[pointerLeft] + nums[pointerRight];
   }
@@ -39,7 +38,7 @@ int *TwoSumWithoutSolution(int *nums, int numsSize, int target) {
   int pointerRight = numsSize - 1;
   int sum = nums[pointerLeft] + nums[pointerRight];
 
-  bool Withsolution = false;
+  bool Withsolution = true;
 
   while (sum != target) {
     if (sum > target) {

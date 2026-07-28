@@ -1,24 +1,24 @@
-
-int containerWithMostWater(int *heights, int sizeheights) {
+int containerWithMostWaterFixed(int *heights, int sizeheights) {
   int pointerslow = 0;
-  int pointerfast = 0;
+  int pointerfast = sizeheights - 1;
 
   int maxContainer = -1;
 
-  while (pointerfast <= sizeheights) {
-    const int heightmin = heights[pointerslow] < heights[pointerfast]
-                        ? heights[pointerslow]
-                        : heights[pointerfast];
+  while (pointerslow < pointerfast) {
+    const int ancho = pointerfast - pointerslow;
+    int minheight = 0;
 
-    const int container = heightmin * (pointerslow + 1);
-
-    if (maxContainer < container) {
-      maxContainer = container;
+    if (heights[pointerslow] < heights[pointerfast]) {
+      minheight = heights[pointerslow];
+      pointerslow++;
+    } else {
+      minheight = heights[pointerfast];
+      pointerfast--;
     }
 
-    pointerslow += 1;
-    pointerfast += 2;
+    const int container = ancho * minheight;
+    if (container > maxContainer)
+      maxContainer = container;
   }
-
   return maxContainer;
 }
