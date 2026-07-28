@@ -24,9 +24,9 @@ Explanation: nums[0] + nums[1] = 2 + 7 = 9
 ```
 
 ```
-Input:  nums = [1, 3, 4, 6, 10, 15], target = 16
-Output: [3, 4]
-Explanation: nums[3] + nums[4] = 6 + 10 = 16
+Input:  nums = [1, 3, 4, 6, 10, 15], target = 14
+Output: [2, 4]
+Explanation: nums[2] + nums[4] = 4 + 10 = 14
 ```
 
 ## Constraints
