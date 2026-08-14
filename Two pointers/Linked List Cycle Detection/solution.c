@@ -1,31 +1,25 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-typedef struct node *head;
+typedef struct node *Node;
 struct node {
   int val;
-  head next;
+  Node next;
 };
 
-bool cycle(head *l) {
+bool cycle(Node *l) {
   if (l == NULL)
     return false;
 
-  bool solution = false;
+  Node slow = *l;
+  Node fast = *l;
 
-  head pointerleft = *l;
-  head pointerRight = pointerleft;
-
-  while (pointerleft != NULL) {
-    pointerRight = pointerleft;
-    while (pointerRight != NULL) {
-      pointerRight = pointerRight->next;
-      if (pointerRight->val == pointerleft->val) {
-        solution = true;
-        break;
-      }
-    }
+  while (fast != NULL && fast->next != NULL) {
+    slow = slow->next;
+    fast = fast->next->next;
+    if (slow == fast)
+      return true;
   }
 
-  return solution;
+  return false;
 }

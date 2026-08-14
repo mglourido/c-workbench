@@ -1,28 +1,13 @@
 int removeDuplicates(int *nums, int sizeNums) {
-  int k = sizeNums-1;
+  if (sizeNums == 0)
+    return 0;
 
-  int pointerSet = 0; // pointer that sets the number being checked
-  int pointerSearch = 0;
+  int slow = 0;
 
-  while (pointerSet < k) {
-    const int numRevise = nums[pointerSet];
-    pointerSearch = pointerSet+1;
-
-    while (nums[pointerSearch] == numRevise)
-      pointerSearch++;
-
-    int steps = pointerSearch - pointerSet;
-    k -= steps;
-
-    // reposition elements
-    while (pointerSearch < k) {
-      steps++;
-      pointerSearch++;
-      nums[pointerSearch - steps] = nums[pointerSearch];
-    }
-
-    pointerSet++;
+  for (int fast = 1; fast < sizeNums; fast++) {
+    if (nums[fast] != nums[slow])
+      nums[++slow] = nums[fast];
   }
 
-  return k;
+  return slow + 1;
 }
